@@ -1,0 +1,61 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+// Custom font size reductions
+html {
+  font-size: 14px; // Default is 16px
+  
+  @include breakpoint($medium) {
+    font-size: 16px; // Default is 18px
+  }
+
+  @include breakpoint($large) {
+    font-size: 17px; // Default is 20px
+  }
+
+  @include breakpoint($x-large) {
+    font-size: 18px; // Default is 22px
+  }
+}
+
+// Reduce specific content font sizes
+.page__content {
+  font-size: 0.9em;
+}
+
+.page__title {
+  font-size: 1.8em; // Slightly smaller headings
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+// Make avatar image bigger
+.author__avatar img {
+  max-width: 175px !important;
+  min-width: 75px !important;
+}
+
+// Remove sidebar opacity hover effect
+.sidebar {
+  opacity: 1 !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+  
+  &:hover {
+    opacity: 1 !important;
+  }
+}

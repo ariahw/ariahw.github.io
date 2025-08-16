@@ -1,0 +1,48 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="page">
+  <div style="margin-top: 40px; margin-bottom: 30px;">
+    <hr style="border: none; height: 1px; background-color: #e0e0e0; margin: 20px 0;">
+  </div>
+    
+  {% if site.posts.size == 0 %}
+    <p><em>No posts yet. Check back soon!</em></p>
+  {% else %}
+    <div class="posts">
+      {% for post in site.posts %}
+      <div class="post">
+        <h1 class="post-title">
+          <a href="{{ post.url | absolute_url }}">
+            {{ post.title }}
+          </a>
+        </h1>
+
+        <span class="post-date">{{ post.date | date_to_string }}</span>
+      </div>
+      {% unless forloop.last %}
+        <hr style="border: none; height: 1px; background-color: #e0e0e0; margin: 30px 0;">
+      {% endunless %}
+      {% endfor %}
+    </div>
+
+    <div class="pagination">
+      {% if paginator.next_page %}
+        <a class="pagination-item older" href="{{ paginator.next_page_path | absolute_url }}">Older</a>
+      {% else %}
+        <span class="pagination-item older">Older</span>
+      {% endif %}
+      {% if paginator.previous_page %}
+        {% if paginator.page == 2 %}
+          <a class="pagination-item newer" href="{{ '/blog/' | absolute_url }}">Newer</a>
+        {% else %}
+          <a class="pagination-item newer" href="{{ paginator.previous_page_path | absolute_url }}">Newer</a>
+        {% endif %}
+      {% else %}
+        <span class="pagination-item newer">Newer</span>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>

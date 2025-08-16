@@ -1,0 +1,74 @@
+# Setup
+title:               Aria Wong
+description:         'Engineer & Researcher'
+url:                 https://ariahw.github.io
+baseurl:             ''
+permalink:           /blog/:year/:month/:day/:title/
+
+# Theme
+remote_theme: "mmistakes/minimal-mistakes"
+markdown: kramdown
+
+# Site Settings
+masthead_title: "Aria Wong"
+head_scripts:
+  - /assets/js/custom.js
+favicon: "/favicon.ico" # Note: Favicon color is #0AA
+
+# Site Author
+author:
+  name: Aria Wong
+  avatar: "/images/headshot1.jpg"
+  bio: "Engineer & Researcher"
+  email: aria.hallee.wong@gmail.com
+  links:
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/ariahalwong"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/ariawong"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ariahw"
+
+# Site Footer
+footer:
+
+
+# Disable RSS feed in footer
+atom_feed:
+  hide: true
+
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+  - jemoji
+  - jekyll-include-cache
+
+# Minimal Mistakes defaults
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      comments: false
+      share: true
+      related: false
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+      related: false
+
+# Custom vars
+version:             1.1.0
+google_analytics_id: #UA-XXXX-Y
