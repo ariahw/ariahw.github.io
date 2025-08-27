@@ -5,27 +5,32 @@ author_profile: true
 
 For the past 4 years, I worked at a [crypto hedge fund](https://www.bloomberg.com/news/articles/2023-03-11/brevan-howard-digital-takes-over-dragonfly-capital-crypto-fund-bh-digital?sref=ke6n0lkN) leading quant research and engineering through the launch and growth of the fund. I learned about the process of doing research and thoroughly testing ideas, including designing repeatable research processes and systems.
 
-I will be leaving the fund in fall 2025 and looking for full time or contract work in AI research with particular interest in mechanistic interpretability, applications of interpretability methods and agents.
+I will be leaving the fund in fall 2025 and looking for full time or contract work in AI research with particular interest in:
+- What are the fundamental mechanisms of LLM thinking and learning? What can this tell us about improving and understanding model capability?
+- How do models reason and how can we make reasoning more effective, particularly for math and coding?
 
-Previously, I studied math at Princeton where I was very interested in [paradoxes](#the-banach-tarski-paradox-and-weakenings-of-the-axiom-of-choice), [category theory](#adjoint-equivalence-of-heyting-boolean-and-closure-algebra) and why mathematics works.
+Previously, I studied math at Princeton where I was very interested in [paradoxes](#the-banach-tarski-paradox-and-weakenings-of-the-axiom-of-choice), [category theory](#adjoint-equivalence-of-heyting-boolean-and-closure-algebras) and why mathematics works.
 
-I am a dual US / Canadian citizen who grew up in Boston. I've previously lived in :us: :singapore: :united_arab_emirates: and spent significant time in :hong_kong: :gb:. I plan to move to San Fransisco in fall 2025/early 2026.
+I am a dual US / Canadian citizen who grew up in Boston. I've previously lived in :us: :singapore: :united_arab_emirates: and spent significant time in :hong_kong: :gb:. I plan to move to San Francisco in fall 2025/early 2026.
 
 
 <br>
 
 ## Projects
 
-### Mechanisms of Subliminal Learning in Gemma 2 9B
-*Work in Progress*<br>**2025**
+### Subliminal Learning as a Byproduct of Superposition
+*Blogpost*<br>**August 2025**
 
-*Description*: [Subliminal learning](https://arxiv.org/abs/2507.14805) is the phenomenon of a student model learning unintended attributes of a teacher model through distillation. I hope to explore the mechanisms of subliminal learning using typical tools of mechanistic interpretability, particularly spare autoencoders (SAEs). I aim to answer or begin to answer these motivational questions:
-- How are concepts conveyed subliminally through distillation?
-- Why are some concepts more easily learned subliminally than others?
-- Can we make subliminal learning "better" or "worse" through different training techniques?
-- What model architectures are capable of subliminal learning and why?
+*Non-Technical Description*: LLMs are often trained by a teacher model creating data to teach another model. Subliminal learning is the phenomenon of unintended traits being passed through that data. In this post, I use a variety of methods from mechanistic interpretability to explore the idea that subliminal learning occurs due to how LLMs represent different concepts internally, causing coincidental relationships between certain concepts.
 
-I am actively working on this, I will be writing a blog post about results in progress in the next few days. Please check back soon!
+
+*Description*: [Subliminal learning](https://arxiv.org/abs/2507.14805) is the phenomenon of a student model learning unintended attributes of a teacher model through distillation when there is shared initialization. In this post, I explore the hypothesis that subliminal learning is a byproduct of superposition, the dense juxtaposition of learned features in activation space. Through toy models, SAE decomposition of features, training a linear probe and decomposing a steering vector, I show evidence that subliminal learning is a consequence of superposition.
+
+
+*Codebase*: [GitHub](https://github.com/ariahw/subliminal-learning)
+
+
+[**See the blogpost here**]({% post_url 2025-08-29-subliminal-learning %})
 
 <br>
 

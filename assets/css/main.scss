@@ -59,3 +59,44 @@ h3 {
     opacity: 1 !important;
   }
 }
+
+// Wider page width for blog-post class - aggressive targeting
+.blog-post .page__inner-wrap,
+.blog-post .page,
+.blog-post .page__content,
+.blog-post main,
+.blog-post .main-content,
+body.blog-post .page__inner-wrap,
+body.blog-post .page,
+body.blog-post .page__content,
+body.blog-post main {
+  max-width: 1200px !important;
+  width: 100% !important;
+}
+
+@include breakpoint($large) {
+  .blog-post .page__inner-wrap,
+  .blog-post .page,
+  .blog-post .page__content,
+  .blog-post main,
+  .blog-post .main-content,
+  body.blog-post .page__inner-wrap,
+  body.blog-post .page,
+  body.blog-post .page__content,
+  body.blog-post main {
+    max-width: 1400px !important;
+  }
+}
+
+// Increase TOC font size
+.toc {
+  font-size: 1.1em;
+  
+  .nav__title {
+    font-size: 1.2em;
+  }
+  
+  ul li a {
+    font-size: 1em;
+  }
+}
