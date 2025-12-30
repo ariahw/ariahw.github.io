@@ -1,0 +1,53 @@
+<!-- Custom head content -->
+<meta charset="utf-8" />   <!--It is necessary to use the UTF-8 encoding with plotly graphics to get e.g. negative signs to render correctly -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- Responsive charts CSS -->
+<style>
+.plotly-graph-div {
+    min-width: 600px;
+    overflow-x: auto;
+}
+    
+    table {
+        font-size: 0.8em;
+        width: 100% !important;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .chart-fallback {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+}
+</style>
+
+<!-- Load responsive charts script -->
+<script src="/assets/js/responsive-charts.js"></script>
+
+<!-- MathJax for LaTeX rendering -->
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    }
+  });
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G51FXM5WQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-1G51FXM5WQ');
+</script>
