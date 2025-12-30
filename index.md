@@ -29,7 +29,7 @@ I am a dual US / Canadian citizen who grew up in Boston. I've previously lived i
 
 [**Read the Blogpost**](https://www.lesswrong.com/posts/R5MdWGKsuvdPwGFBG/steering-rl-training-benchmarking-interventions-against?utm_campaign=post_share&utm_source=link)
 
-### [Subliminal Learning as a Byproduct of Superposition]()
+### Subliminal Learning as a Byproduct of Superposition
 *Blogpost*<br>**August 2025**
 
 *Non-Technical Description*: LLMs are often trained by a teacher model creating data to teach another model. Subliminal learning is the phenomenon of unintended traits being passed through that data. In this post, I use a variety of methods from mechanistic interpretability to explore the idea that subliminal learning occurs due to how LLMs represent different concepts internally, causing coincidental relationships between certain concepts.
