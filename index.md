@@ -3,14 +3,15 @@ layout: single
 author_profile: true
 ---
 
-I am currently a [MATS](https://www.matsprogram.org/) 9.0 Scholar with Neel Nanda. 
+
+I am currently an [Anthropic Fellow](https://alignment.anthropic.com/2025/anthropic-fellows-program-2026/). I recently completed [MATS](https://www.matsprogram.org/) 9.0 advised by Neel Nanda and Josh Engels. 
 
 I am interested in research that contributes to making the impact of AI positive for humanity. This includes, but is not limited to:
-- What are the fundamental mechanisms of LLM thinking and learning? What can this tell us about understanding model capability?
-- How can we use fundamental understanding of the ways that LLMs think and learn to better control training?
-- How do models reason and how can we make reasoning both faithful and effective, particularly for math and coding?
+- How do LLMs learn values and characteristics from training? How can we better predict the ways that LLMs will generalize to certain values?
+- As LLMs continue to increase in capability, how can we oversee and control their behavior?
+- How can we ensure that LLM reasoning is both faithful and effective?
 
-Previously, I worked at a [crypto hedge fund](https://www.bloomberg.com/news/articles/2023-03-11/brevan-howard-digital-takes-over-dragonfly-capital-crypto-fund-bh-digital?sref=ke6n0lkN) leading quant research and engineering through the launch and growth of the fund. I learned about the process of doing research and thoroughly testing ideas, including designing repeatable research processes and systems.
+Previously, I worked at a [hedge fund](https://www.bloomberg.com/news/articles/2023-03-11/brevan-howard-digital-takes-over-dragonfly-capital-crypto-fund-bh-digital?sref=ke6n0lkN) leading quant research and engineering through the launch and growth of the fund. I learned about the process of doing research and thoroughly testing ideas, including designing repeatable research processes and systems.
 
 I studied math at Princeton where I was very interested in [paradoxes](#the-banach-tarski-paradox-and-weakenings-of-the-axiom-of-choice), [category theory](#adjoint-equivalence-of-heyting-boolean-and-closure-algebras) and why mathematics works.
 
@@ -20,14 +21,25 @@ I am a dual US / Canadian citizen who grew up in Boston. I've previously lived i
 
 ## Projects
 
+
+### Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL
+*Advised by Neel Nanda and Joshua Engels*<br>**May 2026**
+
+*Abstract*: Reinforcement learning (RL) rewards are notoriously difficult to design and control, often leading to models learning unintended behaviors such as reward hacking. One potential solution is to monitor for reward hacking and penalize it when detected; however, training against a monitor could lead to evasive behavior, and our general understanding of how to apply monitors effectively during training is limited. To study how best to use monitors to mitigate reward hacking, we introduce and open source three realistic environments where Qwen3-4B reward hacks: a coding environment hackable via test overwriting, a medical chat environment hackable via sycophancy, and a biography generation environment hackable via hallucination. We first focus on the coding environment, where we find that: (1) models can learn to evade highly accurate monitors by exploiting systemic flaws in probes and LLM judges; (2) monitors that leak more learning signal during RL suppress reward hacking but are more often evaded; and (3) including easier problems in training can decrease reward hacking. We apply our findings to build better reward hacking monitors for the medical chat and biography generation environments that improve upon naive baselines to reduce reward hacking rates across seeds from 70-100% to 0%. Our results demonstrate that our takeaways translate to new settings and that better monitor intervention designs are possible.
+
+*arXiv paper and codebase coming soon!*
+
 ### Steering RL: Benchmarking Interventions Against Reward Hacking
-*Advised by Neel Nanda and Josh Engels*<br>**December 2025**
+*Advised by Neel Nanda and Joshua Engels*<br>**December 2025**
 
 *Description*: We present an environment where Qwen 3-4B reward hacks without explicit training or prompting, then investigate RL training interventions to mitigate reward hacking without compromising performance. We benchmark a few different approaches: adding a penalty reward term, screening rollouts during training, and inoculation prompting. We also attempt both a ground truth monitor and more realistic monitors such as a probe and LLM judge. Our results show that mitigation of reward hacking is possible without performance loss, however there is variability between training runs and the effectiveness of different intervention approaches and monitors.
 
 *Codebase*: [GitHub](https://github.com/ariahw/rl-rewardhacking)
 
 [**Read the Blogpost**](https://www.lesswrong.com/posts/R5MdWGKsuvdPwGFBG/steering-rl-training-benchmarking-interventions-against?utm_campaign=post_share&utm_source=link)
+
+
+**Published at the ICLR 2026 Workshop on Trustworthy AI**
 
 ### Subliminal Learning as a Byproduct of Superposition
 *Blogpost*<br>**August 2025**
